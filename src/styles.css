@@ -1,0 +1,8 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "css/canvas.css";
+@import "tailwindcss/utilities";
+
+::selection {
+  @apply text-indigo-600 bg-indigo-100;
+}
