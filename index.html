@@ -15,7 +15,7 @@
   <div class="flex flex-col justify-center items-center h-full p-4">
     <div class="relative">
 
-      <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg relative z-20 text-center border-black border">
+      <div class="max-w-2xl mx-auto bg-white rounded-3xl shadow-lg relative z-20 text-center border-black border">
         <div class="px-12 pt-16 pb-6">
           <a href="/"
             class="flex items-center justify-center group  text-xl tracking-tight font-black group transition ease-in-out duration-300 hover:-rotate-2 hover:scale-105 transform">
@@ -93,18 +93,19 @@
         </div>
       </div>
 
-      <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg relative z-20 text-center border-black border mt-6">
+      <div class="max-w-2xl mx-auto bg-white rounded-3xl shadow-lg relative z-20 text-center border-black border mt-6">
 
         <div class="py-6 lg:px-8 px-4">
           <p class="mb-2 text-gray-600">Share your email to get notified when Rails UI goes live</p>
-          <form action="#" class="flex items-center justify-between">
+          <form action="success.html" name="subscribe" method="POST" data-netlify="true"
+            class="flex items-center justify-between">
             <div class="flex-1">
-              <input type="email"
+              <input type="email" name="email"
                 class="flex-1 rounded-l-full py-3 text-xl focus:ring-indigo-100 focus:ring-4 ring-4 ring-transparent px-6 border-black w-full text-black"
                 required placeholder="Enter email" />
             </div>
 
-            <button
+            <button type="submit"
               class="bg-white py-3 pl-4 pr-3 text-center flex items-center border border-black shadow-lg hover:shadow-none group bg-gradient-to-br from-indigo-700 text-white to-indigo-600 rounded-r-3xl focus:ring-4 focus:ring-indigo-100 ring-4 ring-transparent">
               <span class="font-medium">Get notified</span>
               <svg
