@@ -3,7 +3,7 @@
   transform-origin: 170.4px 545.417px;
   z-index: -1;
   left: 0;
-  bottom: -350px;
+  bottom: 0;
   width: 100%;
   overflow: hidden;
   position: absolute;
@@ -11,6 +11,7 @@
 
 @screen lg {
   .static-header {
+    bottom: -350px;
     min-width: 1000px;
     min-height: 1200px;
   }
