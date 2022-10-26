@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="/dist/javascript/app.js"></script>
+  <title>Rails UI</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="bg-white h-full selection-indigo-100 relative">
+  <header class="px-4 py-3 border-b border-slate-200 bg-white/90 backdrop-blur-md">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="/updates.html" class="px-3 py-2 bg-white hover:bg-slate-50 rounded">All updates</a>
+
+      <a href="/">
+        <img src="../images/railsui.svg" alt="Rails UI logo" class="w-24 h-auto" />
+      </a>
+
+      <a href="/" class="font-semibold text-indigo-500 hover:text-indigo-700">Get notified</a>
+    </div>
+  </header>
+
+  <div class="max-w-3xl mx-auto my-16 px-4 pb-24">
+    <span class="block text-sm text-slate-600 uppercase tracking-wider mb-2">Issue 1</span>
+    <div class="prose prose-indigo prose-lg">
+      <h1 id="what-s-new-with-rails-ui">What&#39;s new with Rails UI</h1>
+      <p>Hey!</p>
+      <p>If you&#39;re reading this, you might have seen my <a href="https://youtu.be/00UObz4ALuE">introduction
+          video</a>, which tells the story behind the Rails UI project.</p>
+      <p>That video mentioned the <a href="https://railsui.com">new website</a>, which is probably why you got this
+        update in an email.</p>
+      <h3 id="what-s-new-">What&#39;s new?</h3>
+      <p>This is my first update, so I&#39;m excited to share what I&#39;ve been up to.</p>
+      <p>Check out <a href="https://web-crunch.com/posts/im-building-rails-ui">this blog post</a> for a refresher on
+        Rails UI and why I&#39;m building it.</p>
+      <p>A quick TL;DR; of recent updates:</p>
+      <ul>
+        <li>I have redesigned the onboarding of the gem/engine and improved how you can refer to your Rails UI install
+          in a given Ruby on Rails application.</li>
+        <li>I completed the first theme and design system based on Bootstrap. Next up is the first Tailwind CSS theme.
+        </li>
+        <li>My goal is to complete two themes (one Bootstrap, one Tailwind) and start opening up access for you to
+          trial
+          as an alpha version (If you&#39;re reading this and subscribed to the mailing list, you&#39;ll get first
+          dibs
+          🍕).</li>
+      </ul>
+      <p>You may wonder what the heck a theme is and how it relates to Rails UI. I&#39;ll explain some more below and
+        in
+        upcoming issues.</p>
+      <p>For now, here are screenshots of a fresh install of the Retriever theme, which leverages Bootstrap. This view
+        is called the &quot;Design System&quot;, which features all the components and patterns Rails UI serves up for
+        a
+        given theme and CSS framework.</p>
+      <p>Each theme and CSS framework will offer a different set of components, styles, and content that will be
+        expanded as time allows.</p>
+      <p><img src="https://f001.backblazeb2.com/file/railsui/updates/design-system-component-example.png"
+          alt="A screenshot of a sample component within Rails UI"></p>
+      <h3 id="fully-integrated-to-rails">Fully integrated to Rails</h3>
+      <p>The big difference with Rails UI as a design system is that it&#39;s literally integrated into a new Rails
+        application. Brand colors, content, components, path helpers, and more are all customizable without copying
+        and
+        pasting some JavaScript dependant code you might have to do elsewhere.</p>
+      <p>For now, we feature HTML, ERB, and HAML code snippets. Additionally, JavaScript snippets are available for
+        more
+        interactive components, which typically leverage <a href="https://stimulus.hotwired.dev/">Stimulus.js</a>
+        since
+        that&#39;s a Rails default as of version 7.</p>
+      <p>I have considered adding <a href="https://viewcomponent.org/">ViewComponent</a> and <a
+          href="https://www.phlex.fun/">Phlex</a> support in the future but will need to dive deeply into that
+        stratosphere before adding it to the road map.</p>
+      <p>Additionally, each section of the design system is linkable, so you can share links with co-workers who might
+        need a hand finding a specific component or design asset. Of course, this is assumed you are working locally
+        in
+        a Rails development environment.</p>
+      <p><img src="https://f001.backblazeb2.com/file/railsui/updates/configuration-design.png"
+          alt="New configuration form design for Rails UI"></p>
+      <h3 id="configuration">Configuration</h3>
+      <p>The configuration form got a massive update. This view is the first place you will likely land after the
+        successful installation of Rails UI.</p>
+      <p>The configuration in the screenshot features an active theme called &quot;Retriever,&quot; so the view has
+        fewer controls available.</p>
+      <p>An inactive theme would prompt you to choose both a CSS framework and a theme as a starting point for your
+        design.</p>
+      <p>Themes are considered a starting point rather than a source of truth. The components combined with themes
+        help
+        pave your design in a direction that suits you best.</p>
+      <p>Over time the theme library will scale considerably. My goal is to make this part of the project offer as
+        many
+        themes as possible to avoid too much repetition out in the wild.</p>
+      <p>Of course, all components are customizable thanks to the underlying CSS frameworks and how easy it is to
+        incorporate those into a Rails application.</p>
+      <p><img src="https://f001.backblazeb2.com/file/railsui/updates/landing.jpg"
+          alt="Landing page after installing Rails UI"></p>
+      <p>Finally, for bonus points, this is the first screen you see after installing Rails UI. I had some fun with
+        HTML
+        canvas.</p>
+      <p>For now, Rails UI requires all applications to be brand new. Integrating new design into old is super hard,
+        and
+        while I&#39;d love to say that&#39;s on the horizon, I wonder if it would be a huge focus at this time.</p>
+      <p>I hope you&#39;ll stay tuned for the next update. I have a lot of documentation to write, and that should
+        help
+        me zero in on the gray areas of Rails UI. I want to make it as effortless as possible when it comes to
+        installation, configuration, and using it in the application. That will likely be a learning phase requiring a
+        ton of finesse, but I&#39;m excited to take it on 👏.</p>
+      <p>Cheers until next time,</p>
+      <p>– Andy</p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,6 +1,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "css/canvas.css";
+@import "css/fonts.css";
+
 @import "tailwindcss/utilities";
 
 ::selection {
