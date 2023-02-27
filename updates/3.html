@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="/dist/javascript/app.js"></script>
+  <title>Rails UI</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="bg-white h-full selection-indigo-100 relative">
+  <header class="px-4 py-3 border-b border-slate-200 bg-white/90 backdrop-blur-md">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="/updates.html" class="px-3 py-2 bg-white hover:bg-slate-50 rounded">All updates</a>
+
+      <a href="/">
+        <img src="../images/railsui.svg" alt="Rails UI logo" class="w-24 h-auto" />
+      </a>
+
+      <a href="/" class="font-semibold text-indigo-500 hover:text-indigo-700">Get notified</a>
+    </div>
+  </header>
+
+  <div class="max-w-3xl mx-auto my-16 px-4 pb-24">
+    <span class="block text-sm text-slate-600 uppercase tracking-wider mb-2">Issue 3</span>
+    <div class="prose prose-indigo prose-lg">
+      <h1 id="what-s-new-with-rails-ui-issue-3">What&#39;s new with Rails UI</h1>
+      <p>Hey!</p>
+      <p>At the end of my <a href="https://railsui.com/updates/2.html">last update</a>, I mentioned sharing the first alpha of Rails UI with the mailing list before the new year.</p>
+      <p>Unfortunately, if you&#39;re reading this, it&#39;s evident that I missed my mark. I&#39;m sorry for the delay, and I promise I haven&#39;t wasted time!</p>
+      <p>What&#39;s in this issue?</p>
+      <ol>
+      <li>What I&#39;m currently working on</li>
+      <li>What work lies ahead</li>
+      <li>When you can expect the alpha version</li>
+      <li>Some open-ended ideas</li>
+      </ol>
+      <h2 id="what-i-m-currently-working-on">What I&#39;m currently working on</h2>
+      <p>I&#39;m pushing to wrap up the second of the two first themes that will ship with Rails UI. Those themes are Retriever (Bootstrap) and Hound (Tailwind CSS).</p>
+      <p>The <a href="https://hound.pages.dev/">Hound</a> theme, I have to admit, has gotten more attention than the first theme (Retriever).</p>
+      <p>I added additional variations of standard web components due to the unconstrained nature of Tailwind CSS.</p>
+      <p>Those components include modals, dropdowns, alerts, authentication views (Devise), and breadcrumbs, to name a few.</p>
+      <figure>
+        <img src="https://f001.backblazeb2.com/file/railsui/updates/3/dropdowns.jpg" alt="Rails UI Dropdowns" class="border border-slate-100 rounded">
+        <figcaption class="text-sm text-slate-700 text-center">Dropdowns</figcaption>
+      </figure>
+      <figure>
+          <img src="https://f001.backblazeb2.com/file/railsui/updates/3/breadcrumbs.jpg" alt="Rails UI Breadcrumbs" class="border border-slate-100 rounded">
+        <figcaption class="text-sm text-slate-700 text-center">Breadcrumbs</figcaption>
+      </figure>
+      <figure>
+        <img src="https://f001.backblazeb2.com/file/railsui/updates/3/modals.jpg" alt="Rails UI Modals" class="border border-slate-100 rounded">
+        <figcaption class="text-sm text-slate-700 text-center">Modals</figcaption>
+      </figure>
+      <figure>
+        <img src="https://f001.backblazeb2.com/file/railsui/updates/3/auth.jpg" alt="Rails UI Authentication" class="border border-slate-100 rounded">
+        <figcaption class="text-sm text-slate-700 text-center">Authentication (Devise)</figcaption>
+    </figure>
+      <p>During this time <a href="https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/">Bootstrap also released an alpha version</a>, I&#39;d like to harness so I&#39;ll need to revisit the Retriever theme and ensure things are all square.</p>
+      <p>Overall, Rails UI will benefit from multiple CSS frameworks, but Tailwind CSS stands to reign supreme concerning additional options offered.</p>
+      <h3 id="versioning-strategy-and-updates">Versioning strategy and updates</h3>
+      <p>I&#39;m still wrapping my head around how updates to themes, frameworks, and underlying functionality of Rails UI will work.</p>
+      <p>The obvious path is to maintain Rails UI as a gem/engine you bolt on to a new app, then broadcast releases to the gem via git that you can later use with <code>bundler</code> to install or update. That works great for completely open-sourced projects.</p>
+      <p>I wonder if that strategy scales too well with future goals to offer a premium side of this project. The &#39;ole serial code authorization tactic seems fragile and tough to combat with folks who might share licenses.</p>
+      <p>I&#39;ve got some thinking/considerations to do around this, but I wanted to throw my issue out there to see if anyone has had any history with such a challenge. Hit reply if so!</p>
+      <h2 id="what-work-lies-ahead">What work lies ahead</h2>
+      <ol>
+      <li><p>I&#39;m getting super close to wrapping the Hound theme. As I write this issue, I&#39;m finalizing all authentication views for the theme, which look great. Everything to do with the Hound theme supports dark mode out of the box, so I will be auditing my work so far to accommodate.</p>
+      </li>
+      <li><p>I&#39;ll revisit the Retriever theme after completing the Hound theme. Updates here might include updating Bootstrap to use the <a href="https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/">alpha version</a> and hopefully tackle dark mode for that theme as well. I&#39;m still deciding whether to wait until the official versions of Bootstrap drop, and I might hold off because I need to catch up to my ideal release schedule.</p>
+      </li>
+      <li><p>I must decide on a strategy for sharing the initial alpha. I&#39;d ideally like to invite those interested to a git repo (maybe Gitlab?– Github would be too costly at my phase of this project, unfortunately) where discussions, ideas, and more can take place. Another idea is to publish a &quot;free&quot; version of the gem on rubygems.org. I&#39;m still undecided here, but if you&#39;re on the <a href="https://railsui.com">mailing list</a> you&#39;ll learn where I end up soon enough.</p>
+      </li>
+      </ol>
+      <h2 id="when-you-can-expect-the-alpha-version">When you can expect the alpha version</h2>
+      <p>I&#39;m closer than ever before to getting this in your hands. I&#39;m hoping for an end-of-March or early April alpha at this point.</p>
+      <p>Design is a hard thing to make &quot;MVP&quot; versions of, and there are libraries out in the wild that this needs to be at least comparable to in terms of quality, so I&#39;m obsessing over the details as much as possible even though I realize the sooner I launch the alpha, the better.</p>
+      <h2 id="open-ended-ideas">Open-ended ideas</h2>
+      <h4 id="concerning-business"><em>Concerning business</em></h4>
+      <p>To wrap up this issue, I&#39;m thinking long-term about how Rails UI could be a business or side project and provide free value. I want to help people out, and doing so has a way of paying you back over time.</p>
+      <p>There are different models I could take it.</p>
+      <p><a href="https://www.mikeperham.com/">Mike Perham&#39;s</a> open-source model seems pretty neat, but I worry about maintaining two seperate gems as it appears he does with Sidekiq and Sidekiq Pro.</p>
+      <p>Additionally, the whole licensing model seems overly complex.</p>
+      <p>The team at <a href="https://tailwindui.com/">Tailwind Labs</a> has a one-time purchase model that makes a lot of sense at their scale.</p>
+      <p>As a solo maker, the non-SaaS model will not benefit me by being so niched to Rails.</p>
+      <p>The project&#39;s long-term goal is continuously to add themes and support for additional CSS frameworks. Adding more resources allows businesses and developers (my customer avatar) to hit the ground running with new apps and endeavors.</p>
+      <p>My contribution in an ongoing nature means I&#39;ll need continued funding to keep the lights on and hire help to move faster.</p>
+      <p>Pricing is also tricky to think about, but I&#39;ll cross that bridge when the time comes.</p>
+      <h4 id="concerning-where-the-project-can-go"><em>Concerning where the project can go</em></h4>
+      <p>Rails UI is a project that could scale, but I have my rose-tinted glasses on imagining that :). When conceptualizing the idea, I dreamed as big as a marketplace model where others could buy and sell themes in addition to those Rails UI offers. Time will tell where it goes.</p>
+      <p>I want to focus more directly on this project than on things I&#39;ve worked on in the past. Historically, I&#39;ve had the classic shiny object syndrome, and this time, I need to focus longer and pay more attention to marketing.</p>
+      <h2 id="where-you-can-find-more">Where you can find more</h2>
+      <ul>
+      <li><a href="https://twitter.com/railsui_">Twitter</a> - More of the day-to-day kind of updates with plenty of screenshots.</li>
+      <li><a href="https://www.indiehackers.com/product/rails-ui">Indiehackers</a> - Posting the same updates you are reading now but with like-minded folks. FYI - I just posted the product there, so it&#39;s awaiting approval.</li>
+      <li><a href="https://youtube.com/c/webcrunch">Web-Crunch YouTube</a> - I&#39;ll often dual post video updates to the channel or write Rails/Web Development related content here.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
